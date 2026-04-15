@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tanstack/react-query": "^5.96.2",
     "axios": "^0.26.1",
     "bootstrap": "^4.6.0",
     "moment": "^2.29.4",

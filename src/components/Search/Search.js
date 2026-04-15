@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Loading from "../Loading/Loading";
 import NewsItem from "../NewsItem/NewsItem";
@@ -18,8 +18,15 @@ function Search() {
 
   const dispatch = useDispatch();
 
+
+  // Debounce search dispatch
+  const debounceTimeout = useRef();
   useEffect(() => {
-    dispatch(searchArticle(query));
+    if (debounceTimeout.current) clearTimeout(debounceTimeout.current);
+    debounceTimeout.current = setTimeout(() => {
+      dispatch(searchArticle(query));
+    }, 400); // 400ms debounce
+    return () => clearTimeout(debounceTimeout.current);
   }, [query, dispatch]);
 
   useEffect(() => {
