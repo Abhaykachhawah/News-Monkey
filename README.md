@@ -1,7 +1,5 @@
 # news-app
 
-# Deployed link for the project :
-https://news-app-green-three-47.vercel.app/
 
 <img width="1914" height="1023" alt="image" src="https://github.com/user-attachments/assets/b21c1cb4-e170-4ba7-b5e8-4b260fe2daae" />
 
