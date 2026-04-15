@@ -36,7 +36,6 @@ function News(props) {
     isLoading,
     isError,
     error,
-    refetch,
   } = useQuery({
     queryKey: ["news", country, category],
     queryFn: fetchNews,
